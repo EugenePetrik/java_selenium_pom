@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="NegativeLoginTestSuite" verbose="1">
+    <test name="NegativeLoginTest-CH">
+        <parameter name="browser" value="chrome" />
+        <parameter name="username" value="incorrectUsername"></parameter>
+        <parameter name="password" value="SuperSecretPassword!"></parameter>
+        <parameter name="expectedErrorMessage" value="Your username is invalid!,incorrect username"></parameter>
+        <classes>
+            <class name="com.herokuapp.the-internet.loginpagetests.NegativeLoginTests" />
+        </classes>
+    </test>
+
+    <test name="NegativeLoginTest-FF">
+        <parameter name="browser" value="firefox" />
+        <parameter name="username" value="incorrectUsername"></parameter>
+        <parameter name="password" value="SuperSecretPassword!"></parameter>
+        <parameter name="expectedErrorMessage" value="Your username is invalid!,incorrect username"></parameter>
+        <classes>
+            <class name="com.herokuapp.the-internet.loginpagetests.NegativeLoginTests" />
+        </classes>
+    </test>
+</suite>
