@@ -1,40 +1,15 @@
 package loginpagetests;
 
+import base.BaseTest;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
 
 import static org.testng.Assert.assertTrue;
 
-public class NegativeLoginTests {
-
-    WebDriver driver;
-
-    @Parameters({ "browser" })
-    @BeforeMethod
-    public void setUp(@Optional("chrome") String browser) {
-        // Create driver
-        System.out.println("Create driver " + browser);
-
-        switch (browser) {
-            case "chrome":
-                driver = new ChromeDriver();
-                break;
-            case "firefox":
-                driver = new FirefoxDriver();
-                break;
-            default:
-                System.out.println("Do not how to start: " + browser + ", set up Chrome browser");
-                driver = new ChromeDriver();
-        }
-
-        driver.manage().window().maximize();
-    }
+public class NegativeLoginTests extends BaseTest {
 
     @Parameters({ "username", "password", "expectedErrorMessage" })
     @Test(priority = 1)
@@ -65,11 +40,5 @@ public class NegativeLoginTests {
         assertTrue(actualErrorMessage.contains(expectedErrorMessage),
                 "actualErrorMessage does not contain expectedErrorMessage\nexpectedErrorMessage: "
                         + expectedErrorMessage + "\nactualErrorMessage: " + actualErrorMessage);
-    }
-
-    @AfterMethod
-    public void tearDown() {
-        System.out.println("Close browser");
-        driver.quit();
     }
 }

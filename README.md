@@ -4,14 +4,17 @@
 
 ```mvn clean compile test```
 
-### Run scenarios from specific class:
+### Run scenarios from specific Java class:
 
-```mvn -Dtest=PositiveTests clean test```
+```mvn clean test -Dtest=PositiveLoginTests```
 
 ### Run scenarios from TestNG xml file:
 
 ```mvn clean test -DsuiteXmlFile=testng.xml```
-```mvn clean test -DsuiteXmlFile=LoginTests.xml```
+
+### Run scenarios from specific TestNG xml file:
+
+```mvn test -Dsurefire.suiteXmlFiles=src/test/resources/TestSuites/NegativeLoginTests.xml```
 
 ### TestNG documentation:
 

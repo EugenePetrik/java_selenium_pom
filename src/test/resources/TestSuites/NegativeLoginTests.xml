@@ -5,9 +5,9 @@
         <parameter name="browser" value="chrome" />
         <parameter name="username" value="incorrectUsername"></parameter>
         <parameter name="password" value="SuperSecretPassword!"></parameter>
-        <parameter name="expectedErrorMessage" value="Your username is invalid!,incorrect username"></parameter>
+        <parameter name="expectedErrorMessage" value="Your username is invalid!"></parameter>
         <classes>
-            <class name="com.herokuapp.the-internet.loginpagetests.NegativeLoginTests" />
+            <class name="loginpagetests.NegativeLoginTests" />
         </classes>
     </test>
 
@@ -15,9 +15,9 @@
         <parameter name="browser" value="firefox" />
         <parameter name="username" value="incorrectUsername"></parameter>
         <parameter name="password" value="SuperSecretPassword!"></parameter>
-        <parameter name="expectedErrorMessage" value="Your username is invalid!,incorrect username"></parameter>
+        <parameter name="expectedErrorMessage" value="Your username is invalid!"></parameter>
         <classes>
-            <class name="com.herokuapp.the-internet.loginpagetests.NegativeLoginTests" />
+            <class name="loginpagetests.NegativeLoginTests" />
         </classes>
     </test>
 </suite>
