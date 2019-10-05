@@ -32,7 +32,7 @@ public class FrameEditorTests extends TestUtilities {
     }
 
     @Test(groups = { "smokeTests" })
-    public void testWysiwyg() {
+    public void wysiwygTest() {
         // Open main page
         WelcomePage welcomePage = new WelcomePage(driver, log);
         welcomePage.openPage();

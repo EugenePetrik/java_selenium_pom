@@ -18,6 +18,7 @@
             <class name="multiplewindowstests.MultipleWindowsTests" />
             <class name="frameeditortests.FrameEditorTests" />
             <class name="framestests.FramesTests" />
+            <class name="keypressestests.KeyPressesTests" />
         </classes>
     </test>
 </suite>

@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="KeyPressesTestSuite" verbose="1">
+    <test name="KeyPressesTest">
+        <classes>
+            <class name="keypressestests.KeyPressesTests">
+                <methods>
+                    <include name="pressKeyTest" />
+                    <include name="pressKeyWithActionsTest" />
+                    <include name="pressBackspaceTest" />
+                    <include name="pressPiTest" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

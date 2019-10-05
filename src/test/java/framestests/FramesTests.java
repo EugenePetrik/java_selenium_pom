@@ -11,7 +11,7 @@ import static org.testng.Assert.assertEquals;
 public class FramesTests extends TestUtilities {
 
     @Test(groups = { "smokeTests" })
-    public void testFrameText() {
+    public void frameTextTest() {
         // Open main page
         WelcomePage welcomePage = new WelcomePage(driver, log);
         welcomePage.openPage();

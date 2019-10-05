@@ -11,7 +11,7 @@ import static org.testng.Assert.assertEquals;
 public class ForgotPasswordTests extends TestUtilities {
 
     @Test(groups = { "smokeTests" })
-    public void testRetrievePassword() {
+    public void retrievePasswordTest() {
         log.info("Starting Retrieve Password Test");
 
         // Open Main page

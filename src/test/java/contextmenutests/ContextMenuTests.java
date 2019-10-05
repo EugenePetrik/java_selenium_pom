@@ -10,7 +10,7 @@ import static org.testng.Assert.assertEquals;
 public class ContextMenuTests extends TestUtilities {
 
     @Test(groups = { "smokeTests" })
-    public void testContextMenu() {
+    public void contextMenuTest() {
         // Open main page
         WelcomePage welcomePage = new WelcomePage(driver, log);
         welcomePage.openPage();

@@ -39,19 +39,25 @@
 
     <test name="MultipleWindowsTests">
         <classes>
-            <class name="multiplewindowstests.MultipleWindowsTests"></class>
+            <class name="multiplewindowstests.MultipleWindowsTests" />
         </classes>
     </test>
 
     <test name="FrameEditorTests">
         <classes>
-            <class name="frameeditortests.FrameEditorTests"></class>
+            <class name="frameeditortests.FrameEditorTests" />
         </classes>
     </test>
 
     <test name="FrameTests">
         <classes>
-            <class name="framestests.FramesTests"></class>
+            <class name="framestests.FramesTests" />
+        </classes>
+    </test>
+
+    <test name="KeyPressesTests">
+        <classes>
+            <class name="keypressestests.KeyPressesTests" />
         </classes>
     </test>
 </suite>
