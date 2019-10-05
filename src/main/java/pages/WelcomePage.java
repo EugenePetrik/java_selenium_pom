@@ -22,6 +22,8 @@ public class WelcomePage extends BasePageObject {
     private By dragAndDropLocator = By.linkText("Drag and Drop");
     private By hoversLocator = By.linkText("Hovers");
     private By horizontalSliderLocator = By.linkText("Horizontal Slider");
+    private By largeAndDeepDomLocator = By.linkText("Large & Deep DOM");
+    private By infiniteScrollLocator = By.linkText("Infinite Scroll");
 
     public WelcomePage(WebDriver driver, Logger log) {
         super(driver, log);
@@ -160,5 +162,23 @@ public class WelcomePage extends BasePageObject {
         log.info("Clicking Horizontal Slider Link on Welcome Page");
         click(horizontalSliderLocator);
         return new HorizontalSliderPage(driver, log);
+    }
+
+    /**
+     * Open LargeAndDeepDomPage by clicking on Large & Deep DOM Link
+     */
+    public LargeAndDeepDomPage clickLargeAndDeepDomLink() {
+        log.info("Clicking Large And Deep Dom Link on Welcome Page");
+        click(largeAndDeepDomLocator);
+        return new LargeAndDeepDomPage(driver, log);
+    }
+
+    /**
+     * Open InfiniteScrollPage by clicking on Infinite Scroll Link
+     */
+    public InfiniteScrollPage clickInfiniteScrollLink() {
+        log.info("Clicking Infinite Scroll Link on Welcome Page");
+        click(largeAndDeepDomLocator);
+        return new InfiniteScrollPage(driver, log);
     }
 }

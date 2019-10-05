@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="SmokeTestsSuite" verbose="1" parallel="methods" thread-count="4">
+<suite name="Smoke Tests Suite" verbose="1" parallel="methods" thread-count="4">
     <test name="SmokeTests">
         <groups>
             <run>
@@ -23,6 +23,7 @@
             <class name="draganddroptests.DragAndDropTests" />
             <class name="hoverstests.HoversTests" />
             <class name="horizontalslidertests.HorizontalSliderTests" />
+            <class name="javascriptscrollingtests.JavaScriptScrollingTests" />
         </classes>
     </test>
 </suite>

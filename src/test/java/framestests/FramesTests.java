@@ -22,7 +22,7 @@ public class FramesTests extends TestUtilities {
         // Click on Nested Frames link
         NestedFramesPage nestedFramesPage = framesPage.clickNestedFrames();
 
-        //
+        // Verification
         assertEquals(nestedFramesPage.getLeftFrameText(), "LEFT", "Left frame text incorrect");
         assertEquals(nestedFramesPage.getBottomFrameText(), "BOTTOM", "Bottom frame text incorrect");
     }
