@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 
 public class EmailSentPage extends BasePageObject {
 
-    private By contentArea = By.id("content");
+    private By contentAreaLocator = By.id("content");
 
     public EmailSentPage(WebDriver driver, Logger log) {
         super(driver, log);
@@ -16,6 +16,6 @@ public class EmailSentPage extends BasePageObject {
      * Return text from success message
      */
     public String getMessage() {
-        return find(contentArea).getText();
+        return find(contentAreaLocator).getText();
     }
 }

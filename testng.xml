@@ -16,6 +16,8 @@
             <class name="javascriptalertstests.JavaScriptAlertsTests" />
             <class name="contextmenutests.ContextMenuTests" />
             <class name="multiplewindowstests.MultipleWindowsTests" />
+            <class name="frameeditortests.FrameEditorTests" />
+            <class name="framestests.FramesTests" />
         </classes>
     </test>
 </suite>

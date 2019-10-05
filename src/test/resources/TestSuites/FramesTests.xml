@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="FramesTestSuite">
+    <test name="FramesTest">
+        <classes>
+            <class name="framestests.FramesTests"></class>
+        </classes>
+    </test>
+</suite>

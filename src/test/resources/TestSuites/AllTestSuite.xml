@@ -42,4 +42,16 @@
             <class name="multiplewindowstests.MultipleWindowsTests"></class>
         </classes>
     </test>
+
+    <test name="FrameEditorTests">
+        <classes>
+            <class name="frameeditortests.FrameEditorTests"></class>
+        </classes>
+    </test>
+
+    <test name="FrameTests">
+        <classes>
+            <class name="framestests.FramesTests"></class>
+        </classes>
+    </test>
 </suite>

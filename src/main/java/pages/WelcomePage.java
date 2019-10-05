@@ -15,6 +15,8 @@ public class WelcomePage extends BasePageObject {
     private By javaScriptAlertsLinkLocator = By.linkText("JavaScript Alerts");
     private By contextMenuLinkLocator = By.linkText("Context Menu");
     private By multipleWindowsLinkLocator = By.linkText("Multiple Windows");
+    private By editorLinkLocator = By.linkText("WYSIWYG Editor");
+    private By framesLinkLocator = By.linkText("Frames");
 
     public WelcomePage(WebDriver driver, Logger log) {
         super(driver, log);
@@ -90,5 +92,23 @@ public class WelcomePage extends BasePageObject {
         log.info("Clicking Multiple Windows link on Welcome Page");
         click(multipleWindowsLinkLocator);
         return new MultipleWindowsPage(driver, log);
+    }
+
+    /**
+     * Open WYSIWYGEditorPage by clicking on WYSIWYG Editor Link
+     */
+    public FrameEditorPage clickWYSIWYGEditorLink() {
+        log.info("Clicking WYSIWYG Editor link on Welcome Page");
+        click(editorLinkLocator);
+        return new FrameEditorPage(driver, log);
+    }
+
+    /**
+     * Open FramesPage by clicking on Frames Link
+     */
+    public FramesPage clickFramesLink() {
+        log.info("Clicking Frames link on Welcome Page");
+        click(framesLinkLocator);
+        return new FramesPage(driver, log);
     }
 }

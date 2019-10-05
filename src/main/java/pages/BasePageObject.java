@@ -136,4 +136,27 @@ public class BasePageObject {
             }
         }
     }
+
+    /**
+     * Switch to Frame using it's locator
+     */
+    protected void switchToFrame(By frameLocator) {
+        driver.switchTo().frame(find(frameLocator));
+    }
+
+    /**
+     * Switch to Parent Frame using it's locator
+     */
+    protected void switchToParentFrame() {
+        driver.switchTo().parentFrame();
+    }
+
+    /**
+     * Perform scroll to the bottom
+     */
+    public void scrollToBottom() {
+        log.info("Scrolling to the bottom of the page");
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+        jsExecutor.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+    }
 }

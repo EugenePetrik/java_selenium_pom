@@ -8,8 +8,8 @@ public class SecureAreaPage extends BasePageObject {
 
     private String pageUrl = "https://the-internet.herokuapp.com/secure";
 
-    private By logOutButton = By.cssSelector("a[href='/logout']");
-    private By message = By.id("flash");
+    private By logOutButtonLocator = By.cssSelector("a[href='/logout']");
+    private By messageLocator = By.id("flash");
 
     public SecureAreaPage(WebDriver driver, Logger log) {
         super(driver, log);
@@ -26,13 +26,13 @@ public class SecureAreaPage extends BasePageObject {
      * Verification if logOutButton is visible on the page
      */
     public boolean isLogOutButtonVisible() {
-        return find(logOutButton).isDisplayed();
+        return find(logOutButtonLocator).isDisplayed();
     }
 
     /**
      * Return text from success message
      */
     public String getSuccessMessageText() {
-        return find(message).getText();
+        return find(messageLocator).getText();
     }
 }

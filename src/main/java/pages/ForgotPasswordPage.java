@@ -6,8 +6,8 @@ import org.openqa.selenium.WebDriver;
 
 public class ForgotPasswordPage extends BasePageObject {
 
-    private By emailField = By.id("email");
-    private By retrievePasswordButton = By.id("form_submit");
+    private By emailFieldLocator = By.id("email");
+    private By retrievePasswordButtonLocator = By.id("form_submit");
 
     public ForgotPasswordPage(WebDriver driver, Logger log) {
         super(driver, log);
@@ -18,8 +18,8 @@ public class ForgotPasswordPage extends BasePageObject {
      */
     public EmailSentPage retrievePassword(String email) {
         log.info("Executing Retrieve Password with email [" + email + "]");
-        type(email, emailField);
-        click(retrievePasswordButton);
+        type(email, emailFieldLocator);
+        click(retrievePasswordButtonLocator);
         return new EmailSentPage(driver, log);
     }
 }
