@@ -36,4 +36,10 @@
             <class name="contextmenutests.ContextMenuTests" />
         </classes>
     </test>
+
+    <test name="MultipleWindowsTests">
+        <classes>
+            <class name="multiplewindowstests.MultipleWindowsTests"></class>
+        </classes>
+    </test>
 </suite>

@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="MultipleWindowsTestSuite" verbose="1">
+    <test name="MultipleWindowsTest">
+        <classes>
+            <class name="multiplewindowstests.MultipleWindowsTests" />
+        </classes>
+    </test>
+</suite>

@@ -3,7 +3,7 @@
 <suite name="DropdownTestSuite" verbose="1">
     <test name="DropdownTest">
         <classes>
-            <class name="dropdowntests.DropdownTests"></class>
+            <class name="dropdowntests.DropdownTests" />
         </classes>
     </test>
 </suite>

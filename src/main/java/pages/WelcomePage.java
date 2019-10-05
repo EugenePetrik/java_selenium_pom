@@ -14,6 +14,7 @@ public class WelcomePage extends BasePageObject {
     private By dropdownLinkLocator = By.linkText("Dropdown");
     private By javaScriptAlertsLinkLocator = By.linkText("JavaScript Alerts");
     private By contextMenuLinkLocator = By.linkText("Context Menu");
+    private By multipleWindowsLinkLocator = By.linkText("Multiple Windows");
 
     public WelcomePage(WebDriver driver, Logger log) {
         super(driver, log);
@@ -80,5 +81,14 @@ public class WelcomePage extends BasePageObject {
         log.info("Clicking Context Menu link on Welcome Page");
         click(contextMenuLinkLocator);
         return new ContextMenuPage(driver, log);
+    }
+
+    /**
+     * Open MultipleWindowsPage by clicking on Multiple Windows Link
+     */
+    public MultipleWindowsPage clickMultipleWindowsLink() {
+        log.info("Clicking Multiple Windows link on Welcome Page");
+        click(multipleWindowsLinkLocator);
+        return new MultipleWindowsPage(driver, log);
     }
 }

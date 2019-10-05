@@ -15,6 +15,7 @@
             <class name="dropdowntests.DropdownTests" />
             <class name="javascriptalertstests.JavaScriptAlertsTests" />
             <class name="contextmenutests.ContextMenuTests" />
+            <class name="multiplewindowstests.MultipleWindowsTests" />
         </classes>
     </test>
 </suite>

@@ -3,7 +3,14 @@
 <suite name="JavaScriptAlertsTestSuite" verbose="1">
     <test name="JavaScriptAlertsTest">
         <classes>
-            <class name="javascriptalertstests.JavaScriptAlertsTests"></class>
+            <class name="javascriptalertstests.JavaScriptAlertsTests">
+                <methods>
+                    <exclude name="javascriptAlertTest" />
+                    <include name="javascriptAcceptTest" />
+                    <include name="javascriptDismissTest" />
+                    <include name="javascriptPromptTest" />
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>
