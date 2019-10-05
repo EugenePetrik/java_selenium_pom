@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="CheckboxesTestSuite" verbose="1">
+    <test name="CheckboxesTest">
+        <classes>
+            <class name="checkboxespagetests.CheckboxesTests" />
+        </classes>
+    </test>
+</suite>

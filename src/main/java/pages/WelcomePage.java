@@ -10,6 +10,7 @@ public class WelcomePage extends BasePageObject {
 
     private By formAuthenticationLinkLocator = By.linkText("Form Authentication");
     private By forgotPasswordLinkLocator = By.linkText("Forgot Password");
+    private By checkboxesLinkLocator = By.linkText("Checkboxes");
 
     public WelcomePage(WebDriver driver, Logger log) {
         super(driver, log);
@@ -40,5 +41,14 @@ public class WelcomePage extends BasePageObject {
         log.info("Clicking Forgot Password link on Welcome Page");
         click(forgotPasswordLinkLocator);
         return new ForgotPasswordPage(driver, log);
+    }
+
+    /**
+     * Open CheckboxesPage by clicking on Checkboxes Link
+     */
+    public CheckboxesPage clickCheckboxesLink() {
+        log.info("Clicking Checkboxes link on Welcome Page");
+        click(checkboxesLinkLocator);
+        return new CheckboxesPage(driver, log);
     }
 }

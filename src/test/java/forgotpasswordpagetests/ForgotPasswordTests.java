@@ -1,6 +1,6 @@
 package forgotpasswordpagetests;
 
-import base.BaseTest;
+import base.TestUtilities;
 import org.testng.annotations.Test;
 import pages.EmailSentPage;
 import pages.ForgotPasswordPage;
@@ -8,7 +8,7 @@ import pages.WelcomePage;
 
 import static org.testng.Assert.assertEquals;
 
-public class ForgotPasswordTests extends BaseTest {
+public class ForgotPasswordTests extends TestUtilities {
 
     @Test(groups = { "smokeTests" })
     public void testRetrievePassword() {
