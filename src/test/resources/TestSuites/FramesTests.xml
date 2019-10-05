@@ -1,7 +1,15 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="FramesTestSuite">
-    <test name="FramesTest">
+    <test name="FramesTest-CH">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="framestests.FramesTests"></class>
+        </classes>
+    </test>
+
+    <test name="FramesTest-FF">
+        <parameter name="browser" value="firefox"></parameter>
         <classes>
             <class name="framestests.FramesTests"></class>
         </classes>

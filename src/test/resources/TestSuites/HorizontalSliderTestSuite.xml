@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="HorizontalSliderTestSuite" verbose="1">
+    <test name="HorizontalSliderTest-CH">
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="horizontalslidertests.HorizontalSliderTests" />
+        </classes>
+    </test>
+
+    <test name="HorizontalSliderTest-FF">
+        <parameter name="browser" value="firefox" />
+        <classes>
+            <class name="horizontalslidertests.HorizontalSliderTests" />
+        </classes>
+    </test>
+</suite>

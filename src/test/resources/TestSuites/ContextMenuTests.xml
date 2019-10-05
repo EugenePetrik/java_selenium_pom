@@ -1,7 +1,15 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="ContextMenuTestSuite" verbose="1">
-    <test name="ContextMenuTest">
+    <test name="ContextMenuTest-CH">
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="contextmenutests.ContextMenuTests" />
+        </classes>
+    </test>
+
+    <test name="ContextMenuTest-FF">
+        <parameter name="browser" value="firefox" />
         <classes>
             <class name="contextmenutests.ContextMenuTests" />
         </classes>

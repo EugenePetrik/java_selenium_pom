@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="AllTestSuite" verbose="1">
+<suite name="AllTestSuite" verbose="1" parallel="methods" thread-count="4">
     <test name="PositiveLoginTests">
         <classes>
             <class name="loginpagetests.PositiveLoginTests" />
@@ -76,6 +76,12 @@
     <test name="HoversTests">
         <classes>
             <class name="hoverstests.HoversTests" />
+        </classes>
+    </test>
+
+    <test name="HorizontalSliderTests">
+        <classes>
+            <class name="horizontalslidertests.HorizontalSliderTests" />
         </classes>
     </test>
 </suite>
