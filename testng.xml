@@ -19,6 +19,7 @@
             <class name="frameeditortests.FrameEditorTests" />
             <class name="framestests.FramesTests" />
             <class name="keypressestests.KeyPressesTests" />
+            <class name="fileuploadtests.FileUploadTests" />
         </classes>
     </test>
 </suite>
