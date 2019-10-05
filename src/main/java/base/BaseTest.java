@@ -29,7 +29,7 @@ public class BaseTest {
                 driver = new FirefoxDriver();
                 break;
             default:
-                System.out.println("Do not how to start: " + browser + ", set up Chrome browser");
+                System.out.println("Do not know how to start:" + browser + ", starting Chrome browser by default.");
                 driver = new ChromeDriver();
         }
 

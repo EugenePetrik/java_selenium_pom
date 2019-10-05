@@ -1,6 +1,6 @@
 package loginpagetests;
 
-import base.BaseTest;
+import base.TestUtilities;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -9,7 +9,7 @@ import org.testng.annotations.*;
 
 import static org.testng.Assert.assertTrue;
 
-public class NegativeLoginTests extends BaseTest {
+public class NegativeLoginTests extends TestUtilities {
 
     @Parameters({ "username", "password", "expectedErrorMessage" })
     @Test(priority = 1)
