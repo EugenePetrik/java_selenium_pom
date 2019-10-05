@@ -66,4 +66,10 @@
             <class name="fileuploadtests.FileUploadTests" />
         </classes>
     </test>
+
+    <test name="DragAndDropTests">
+        <classes>
+            <class name="draganddroptests.DragAndDropTests" />
+        </classes>
+    </test>
 </suite>

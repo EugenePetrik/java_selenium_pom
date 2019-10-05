@@ -20,6 +20,7 @@
             <class name="framestests.FramesTests" />
             <class name="keypressestests.KeyPressesTests" />
             <class name="fileuploadtests.FileUploadTests" />
+            <class name="draganddroptests.DragAndDropTests" />
         </classes>
     </test>
 </suite>
