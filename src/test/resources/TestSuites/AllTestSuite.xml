@@ -24,4 +24,10 @@
             <class name="dropdowntests.DropdownTests" />
         </classes>
     </test>
+
+    <test name="JavaScriptAlertsTests">
+        <classes>
+            <class name="javascriptalertstests.JavaScriptAlertsTests" />
+        </classes>
+    </test>
 </suite>

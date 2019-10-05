@@ -13,6 +13,7 @@
             <class name="forgotpasswordpagetests.ForgotPasswordTests" />
             <class name="checkboxespagetests.CheckboxesTests" />
             <class name="dropdowntests.DropdownTests" />
+            <class name="javascriptalertstests.JavaScriptAlertsTests"></class>
         </classes>
     </test>
 </suite>
