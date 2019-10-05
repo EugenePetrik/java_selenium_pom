@@ -18,4 +18,10 @@
             <class name="checkboxespagetests.CheckboxesTests" />
         </classes>
     </test>
+
+    <test name="DropdownTests">
+        <classes>
+            <class name="dropdowntests.DropdownTests" />
+        </classes>
+    </test>
 </suite>

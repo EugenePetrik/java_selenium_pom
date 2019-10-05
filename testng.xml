@@ -12,6 +12,7 @@
             <class name="loginpagetests.PositiveLoginTests" />
             <class name="forgotpasswordpagetests.ForgotPasswordTests" />
             <class name="checkboxespagetests.CheckboxesTests" />
+            <class name="dropdowntests.DropdownTests" />
         </classes>
     </test>
 </suite>
