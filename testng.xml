@@ -1,9 +1,16 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="PositiveLoginTestSuite" verbose="1">
-    <test name="PositiveLoginTest">
+<suite name="SmokeTestsSuite" verbose="1">
+    <test name="SmokeTests">
+        <groups>
+            <run>
+                <include name="smokeTests" />
+            </run>
+        </groups>
+
         <classes>
             <class name="loginpagetests.PositiveLoginTests" />
+            <class name="forgotpasswordpagetests.ForgotPasswordTests" />
         </classes>
     </test>
 </suite>

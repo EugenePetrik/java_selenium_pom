@@ -14,8 +14,4 @@
 
 ### Run scenarios from specific TestNG xml file:
 
-```mvn test -Dsurefire.suiteXmlFiles=src/test/resources/TestSuites/NegativeLoginTests.xml```
-
-### TestNG documentation:
-
-```https://testng.org/doc/documentation-main.html#testng-xml```
+```mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/TestSuites/NegativeLoginTests.xml```

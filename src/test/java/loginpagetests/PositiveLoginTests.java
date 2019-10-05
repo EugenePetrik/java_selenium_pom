@@ -10,7 +10,7 @@ import static org.testng.Assert.*;
 
 public class PositiveLoginTests extends TestUtilities {
 
-    @Test
+    @Test(priority = 1, enabled = false, groups = { "positiveTests", "smokeTests" })
     public void positiveLoginTest() {
         log.info("Starting Positive Login Test");
 
