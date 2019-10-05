@@ -21,6 +21,7 @@
             <class name="keypressestests.KeyPressesTests" />
             <class name="fileuploadtests.FileUploadTests" />
             <class name="draganddroptests.DragAndDropTests" />
+            <class name="hoverstests.HoversTests"></class>
         </classes>
     </test>
 </suite>

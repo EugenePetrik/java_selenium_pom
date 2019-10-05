@@ -72,4 +72,10 @@
             <class name="draganddroptests.DragAndDropTests" />
         </classes>
     </test>
+
+    <test name="HoversTests">
+        <classes>
+            <class name="hoverstests.HoversTests" />
+        </classes>
+    </test>
 </suite>
