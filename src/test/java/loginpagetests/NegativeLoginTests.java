@@ -14,12 +14,12 @@ public class NegativeLoginTests extends TestUtilities {
     @Parameters({ "username", "password", "expectedErrorMessage" })
     @Test(priority = 1)
     public void negativeLoginTest(String username, String password, String expectedErrorMessage) {
-        System.out.println("Start Negative Login Test");
+        log.info("Starting Negative Login Test");
 
         // Open Main page
         String url = "https://the-internet.herokuapp.com";
         driver.get(url);
-        System.out.println("Main page is opened");
+        log.info("Main page is opened");
 
         // Click on Form Authentication link
         driver.findElement(By.linkText("Form Authentication")).click();
