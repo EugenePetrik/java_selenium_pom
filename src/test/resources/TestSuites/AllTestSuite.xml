@@ -30,4 +30,10 @@
             <class name="javascriptalertstests.JavaScriptAlertsTests" />
         </classes>
     </test>
+
+    <test name="ContextMenuTests">
+        <classes>
+            <class name="contextmenutests.ContextMenuTests" />
+        </classes>
+    </test>
 </suite>

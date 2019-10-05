@@ -13,6 +13,7 @@ public class WelcomePage extends BasePageObject {
     private By checkboxesLinkLocator = By.linkText("Checkboxes");
     private By dropdownLinkLocator = By.linkText("Dropdown");
     private By javaScriptAlertsLinkLocator = By.linkText("JavaScript Alerts");
+    private By contextMenuLinkLocator = By.linkText("Context Menu");
 
     public WelcomePage(WebDriver driver, Logger log) {
         super(driver, log);
@@ -70,5 +71,14 @@ public class WelcomePage extends BasePageObject {
         log.info("Clicking JavaScript Alerts link on Welcome Page");
         click(javaScriptAlertsLinkLocator);
         return new JavaScriptAlertsPage(driver, log);
+    }
+
+    /**
+     * Open ContextMenuPage by clicking on Context Menu Link
+     */
+    public ContextMenuPage clickContextMenuLink() {
+        log.info("Clicking Context Menu link on Welcome Page");
+        click(contextMenuLinkLocator);
+        return new ContextMenuPage(driver, log);
     }
 }

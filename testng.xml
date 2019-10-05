@@ -13,7 +13,8 @@
             <class name="forgotpasswordpagetests.ForgotPasswordTests" />
             <class name="checkboxespagetests.CheckboxesTests" />
             <class name="dropdowntests.DropdownTests" />
-            <class name="javascriptalertstests.JavaScriptAlertsTests"></class>
+            <class name="javascriptalertstests.JavaScriptAlertsTests" />
+            <class name="contextmenutests.ContextMenuTests" />
         </classes>
     </test>
 </suite>
