@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="JavaScriptScrollingTestSuite">
+<suite name="JavaScriptScrollingTestSuite" verbose="1">
     <test name="JavaScriptScrollingTest">
         <classes>
             <class name="javascriptscrollingtests.JavaScriptScrollingTests" />

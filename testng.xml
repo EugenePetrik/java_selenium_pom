@@ -24,6 +24,7 @@
             <class name="hoverstests.HoversTests" />
             <class name="horizontalslidertests.HorizontalSliderTests" />
             <class name="javascriptscrollingtests.JavaScriptScrollingTests" />
+            <class name="waitstests.WaitTests" />
         </classes>
     </test>
 </suite>

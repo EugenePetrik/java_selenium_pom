@@ -7,7 +7,7 @@ import pages.*;
 public class JavaScriptScrollingTests extends TestUtilities {
 
     @Test(groups = { "smokeTests" })
-    public void testScrollToTable() {
+    public void scrollToTableTest() {
         // Open main page
         WelcomePage welcomePage = new WelcomePage(driver, log);
         welcomePage.openPage();
@@ -20,7 +20,7 @@ public class JavaScriptScrollingTests extends TestUtilities {
     }
 
     @Test(groups = { "smokeTests" })
-    public void testScrollToFifthParagraph() {
+    public void scrollToFifthParagraphTest() {
         // Open main page
         WelcomePage welcomePage = new WelcomePage(driver, log);
         welcomePage.openPage();
