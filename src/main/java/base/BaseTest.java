@@ -30,7 +30,7 @@ public class BaseTest {
         // driver.manage().window().fullscreen();
         // driver.manage().window().setSize(new Dimension(375, 812));
 
-        // driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
     @AfterMethod(alwaysRun = true)
