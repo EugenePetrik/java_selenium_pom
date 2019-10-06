@@ -9,9 +9,9 @@ import static org.testng.Assert.assertTrue;
 
 public class FileUploadTests extends TestUtilities {
 
-    @Test(groups = { "smokeTests" })
-    public void fileUploadTest() {
-        log.info("Starting File Upload Test");
+    @Test(groups = { "smokeTests" }, dataProvider = "files")
+    public void fileUploadTest(int number, String fileName) {
+        log.info("Starting File Upload Test #" + number + " for " + fileName);
 
         // Open main page
         WelcomePage welcomePage = new WelcomePage(driver, log);
@@ -21,7 +21,6 @@ public class FileUploadTests extends TestUtilities {
         FileUploaderPage fileUploaderPage = welcomePage.clickFileUploadLink();
 
         // Select file
-        String fileName = "logo.png";
         fileUploaderPage.selectFile(fileName);
 
         // Push upload button
