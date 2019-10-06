@@ -22,7 +22,7 @@ public class NegativeLoginTests extends TestUtilities {
         String expectedErrorMessage = testData.get("expectedMessage");
         String description = testData.get("description");
 
-        log.info("Starting negativeLogInTest # " + number + " for " + description);
+        log.info("Starting Negative Login Test # " + number + " for " + description);
 
         // Open Main page
         WelcomePage welcomePage = new WelcomePage(driver, log);

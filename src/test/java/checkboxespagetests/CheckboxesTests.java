@@ -11,8 +11,6 @@ public class CheckboxesTests extends TestUtilities {
 
     @Test(groups = { "smokeTests" })
     public void selectingTwoCheckboxesTest() {
-        log.info("Starting Selecting Two Checkboxes Test");
-
         // Open main page
         WelcomePage welcomePage = new WelcomePage(driver, log);
         welcomePage.openPage();

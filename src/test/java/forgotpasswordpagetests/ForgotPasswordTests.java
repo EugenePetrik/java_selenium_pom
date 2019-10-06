@@ -21,7 +21,7 @@ public class ForgotPasswordTests extends TestUtilities {
         String expectedMessage = testData.get("expectedMessage");
         String description = testData.get("description");
 
-        log.info("Starting RetrievePasswordTest # " + number + " for " + description);
+        log.info("Starting Retrieve Password Test # " + number + " for " + description);
 
         // Open Main page
         WelcomePage welcomePage = new WelcomePage(driver, log);

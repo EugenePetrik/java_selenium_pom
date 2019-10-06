@@ -12,8 +12,6 @@ public class PositiveLoginTests extends TestUtilities {
 
     @Test(priority = 1, enabled = true, groups = { "positiveLoginTests", "smokeTests" })
     public void positiveLoginTest() {
-        log.info("Starting Positive Login Test");
-
         // Open Main page
         WelcomePage welcomePage = new WelcomePage(driver, log);
         welcomePage.openPage();
