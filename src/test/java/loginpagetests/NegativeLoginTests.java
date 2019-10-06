@@ -1,18 +1,28 @@
 package loginpagetests;
 
+import base.CsvDataProviders;
 import base.TestUtilities;
 import org.testng.annotations.*;
 import pages.LoginPage;
 import pages.WelcomePage;
 
+import java.util.Map;
+
 import static org.testng.Assert.assertTrue;
 
 public class NegativeLoginTests extends TestUtilities {
 
-    @Parameters({ "username", "password", "expectedErrorMessage" })
-    @Test(priority = 1)
-    public void negativeLoginTest(String username, String password, String expectedErrorMessage) {
-        log.info("Starting Negative Login Test");
+    @Test(priority = 1, enabled = true, groups = { "negativeLoginTests", "smokeTests" },
+            dataProvider = "csvReader", dataProviderClass = CsvDataProviders.class)
+    public void negativeLoginTest(Map<String, String> testData) {
+        // Data
+        String number = testData.get("number");
+        String username = testData.get("username");
+        String password = testData.get("password");
+        String expectedErrorMessage = testData.get("expectedMessage");
+        String description = testData.get("description");
+
+        log.info("Starting negativeLogInTest # " + number + " for " + description);
 
         // Open Main page
         WelcomePage welcomePage = new WelcomePage(driver, log);

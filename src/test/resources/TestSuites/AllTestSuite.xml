@@ -7,6 +7,12 @@
         </classes>
     </test>
 
+    <test name="NegativeLoginTests">
+        <classes>
+            <class name="loginpagetests.NegativeLoginTests" />
+        </classes>
+    </test>
+
     <test name="ForgotPasswordTests">
         <classes>
             <class name="forgotpasswordpagetests.ForgotPasswordTests" />
