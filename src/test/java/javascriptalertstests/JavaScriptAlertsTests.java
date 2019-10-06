@@ -2,15 +2,16 @@ package javascriptalertstests;
 
 import base.TestUtilities;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import pages.JavaScriptAlertsPage;
 import pages.WelcomePage;
-
-import static org.testng.Assert.*;
 
 public class JavaScriptAlertsTests extends TestUtilities {
 
     @Test(groups = { "alertsTests", "smokeTests" })
     public void javascriptAlertTest() {
+        SoftAssert softAssert = new SoftAssert();
+
         // Open main page
         WelcomePage welcomePage = new WelcomePage(driver, log);
         welcomePage.openPage();
@@ -32,15 +33,19 @@ public class JavaScriptAlertsTests extends TestUtilities {
 
         // Verifications
         // 1 - Alert text is expected
-        assertTrue(alertMessage.equals("I am a JS Alert"),
+        softAssert.assertTrue(alertMessage.equals("I am a JS Alert"),
                 "Alert message is not expected. \nShould be 'I am a JS Alert', but it is '" + alertMessage + "'");
         // 2 - Result text is expected
-        assertTrue(result.equals("You successfuly clicked an alert"),
+        softAssert.assertTrue(result.equals("You successfuly clicked an alert"),
                 "Result is not expected. \nShould be 'You successfully clicked an alert', but it is '" + result + "'");
+
+        softAssert.assertAll();
     }
 
     @Test(groups = { "alertsTests", "smokeTests" })
     public void javascriptAcceptTest() {
+        SoftAssert softAssert = new SoftAssert();
+
         // Open main page
         WelcomePage welcomePage = new WelcomePage(driver, log);
         welcomePage.openPage();
@@ -62,15 +67,19 @@ public class JavaScriptAlertsTests extends TestUtilities {
 
         // Verifications
         // 1 - Alert text is expected
-        assertTrue(alertMessage.equals("I am a JS Confirm"),
+        softAssert.assertTrue(alertMessage.equals("I am a JS Confirm"),
                 "Alert message is not expected. \nShould be 'I am a JS Confirm', but it is '" + alertMessage + "'");
         // 2 - Result text is expected
-        assertTrue(result.equals("You clicked: Ok"),
+        softAssert.assertTrue(result.equals("You clicked: Ok"),
                 "Result is not expected. \nShould be 'You clicked: Ok', but it is '" + result + "'");
+
+        softAssert.assertAll();
     }
 
     @Test(groups = { "alertsTests", "smokeTests" })
     public void javascriptDismissTest() {
+        SoftAssert softAssert = new SoftAssert();
+
         // Open main page
         WelcomePage welcomePage = new WelcomePage(driver, log);
         welcomePage.openPage();
@@ -92,15 +101,19 @@ public class JavaScriptAlertsTests extends TestUtilities {
 
         // Verifications
         // 1 - Alert text is expected
-        assertTrue(alertMessage.equals("I am a JS Confirm"),
+        softAssert.assertTrue(alertMessage.equals("I am a JS Confirm"),
                 "Alert message is not expected. \nShould be 'I am a JS Confirm', but it is '" + alertMessage + "'");
         // 2 - Result text is expected
-        assertTrue(result.equals("You clicked: Cancel"),
+        softAssert.assertTrue(result.equals("You clicked: Cancel"),
                 "Result is not expected. \nShould be 'You clicked: Cancel', but it is '" + result + "'");
+
+        softAssert.assertAll();
     }
 
     @Test(groups = { "alertsTests", "smokeTests" })
     public void javascriptPromptTest() {
+        SoftAssert softAssert = new SoftAssert();
+
         // Open main page
         WelcomePage welcomePage = new WelcomePage(driver, log);
         welcomePage.openPage();
@@ -122,10 +135,12 @@ public class JavaScriptAlertsTests extends TestUtilities {
 
         // Verifications
         // 1 - Alert text is expected
-        assertTrue(alertMessage.equals("I am a JS prompt"),
+        softAssert.assertTrue(alertMessage.equals("I am a JS prompt"),
                 "Alert message is not expected. \nShould be 'I am a JS prompt', but it is '" + alertMessage + "'");
         // 2 - Result text is expected
-        assertTrue(result.equals("You entered: Hello Alert, it's Eugene here"),
+        softAssert.assertTrue(result.equals("You entered: Hello Alert, it's Eugene here"),
                 "result is not expected. \nShould be 'You entered: Hello Alert, its Dmitry here', but it is '" + result + "'");
+
+        softAssert.assertAll();
     }
 }
