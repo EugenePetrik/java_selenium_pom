@@ -1,0 +1,31 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="All Test Suite" verbose="1" parallel="methods" thread-count="4">
+    <listeners>
+        <listener class-name="base.TestListener"></listener>
+    </listeners>
+
+    <test name="All Tests In Headless Chrome">
+        <parameter name="browser" value="chromeheadless" />
+        <classes>
+            <class name="loginpagetests.PositiveLoginTests" />
+            <class name="loginpagetests.NegativeLoginTests" />
+            <class name="forgotpasswordpagetests.ForgotPasswordTests" />
+            <class name="checkboxespagetests.CheckboxesTests" />
+            <class name="dropdowntests.DropdownTests" />
+            <class name="javascriptalertstests.JavaScriptAlertsTests" />
+            <class name="contextmenutests.ContextMenuTests" />
+            <class name="multiplewindowstests.MultipleWindowsTests" />
+            <class name="frameeditortests.FrameEditorTests" />
+            <class name="framestests.FramesTests" />
+            <class name="keypressestests.KeyPressesTests" />
+            <class name="fileuploadtests.FileUploadTests" />
+            <class name="draganddroptests.DragAndDropTests" />
+            <class name="hoverstests.HoversTests" />
+            <class name="horizontalslidertests.HorizontalSliderTests" />
+            <class name="javascriptscrollingtests.JavaScriptScrollingTests" />
+            <class name="waitstests.WaitTests" />
+            <class name="javascripterrorstests.JavaScriptErrorsTests" />
+        </classes>
+    </test>
+</suite>
