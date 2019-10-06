@@ -10,6 +10,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
+import java.lang.reflect.Method;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
@@ -17,9 +18,13 @@ public class BaseTest {
     protected WebDriver driver;
     protected Logger log;
 
+    protected String testSuiteName;
+    protected String testName;
+    protected String testMethodName;
+
     @Parameters({ "browser" })
     @BeforeMethod(alwaysRun = true)
-    public void setUp(@Optional("chrome") String browser, ITestContext context) {
+    public void setUp(Method method, @Optional("chrome") String browser, ITestContext context) {
         String testName = context.getCurrentXmlTest().getName();
         log = LogManager.getLogger(testName);
 
@@ -31,12 +36,20 @@ public class BaseTest {
         // driver.manage().window().setSize(new Dimension(375, 812));
 
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
+        this.testSuiteName = context.getSuite().getName();
+        this.testName = testName;
+        this.testMethodName = context.getName();
     }
 
     @AfterMethod(alwaysRun = true)
     public void tearDown() {
         log.info("Close browser");
-        driver.manage().deleteAllCookies();
-        driver.quit();
+
+        if (driver != null) {
+            driver.manage().deleteAllCookies();
+            driver.quit();
+            driver = null;
+        }
     }
 }
