@@ -102,4 +102,10 @@
             <class name="waitstests.WaitTests" />
         </classes>
     </test>
+
+    <test name="JavaScriptErrorsTests">
+        <classes>
+            <class name="javascripterrorstests.JavaScriptErrorsTests" />
+        </classes>
+    </test>
 </suite>

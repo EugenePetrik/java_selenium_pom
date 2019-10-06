@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="JavaScriptErrorsTestSuite" verbose="1">
+    <test name="JavaScriptErrorsTest">
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="javascripterrorstests.JavaScriptErrorsTests" />
+        </classes>
+    </test>
+</suite>

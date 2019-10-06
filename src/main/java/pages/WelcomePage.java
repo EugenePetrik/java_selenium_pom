@@ -25,6 +25,7 @@ public class WelcomePage extends BasePageObject {
     private By largeAndDeepDomLocator = By.linkText("Large & Deep DOM");
     private By infiniteScrollLocator = By.linkText("Infinite Scroll");
     private By dynamicLoadingLocator = By.linkText("Dynamic Loading");
+    private By javascriptOnloadEventErrorLocator = By.linkText("JavaScript onload event error");
 
     public WelcomePage(WebDriver driver, Logger log) {
         super(driver, log);
@@ -190,5 +191,14 @@ public class WelcomePage extends BasePageObject {
         log.info("Clicking Infinite Scroll Link on Welcome Page");
         click(dynamicLoadingLocator);
         return new DynamicLoadingPage(driver, log);
+    }
+
+    /**
+     * Open JavaScriptErrorsPage by clicking on JavaScript onload event error Link
+     */
+    public JavaScriptErrorsPage clickJavaScriptErrorsLink() {
+        log.info("Clicking JavaScript onload event error Link on Welcome Page");
+        click(javascriptOnloadEventErrorLocator);
+        return new JavaScriptErrorsPage(driver, log);
     }
 }
