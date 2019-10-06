@@ -212,4 +212,21 @@ public class BasePageObject {
         Actions action = new Actions(driver);
         action.moveToElement(element).build().perform();
     }
+
+    /**
+     * Add cookie
+     */
+    public void setCookie(Cookie cookie) {
+        log.info("Adding cookie " + cookie.getName());
+        driver.manage().addCookie(cookie);
+        log.info("Cookie added");
+    }
+
+    /**
+     * Get cookie value using cookie name
+     */
+    public String getCookie(String name) {
+        log.info("Getting value of cookie " + name);
+        return driver.manage().getCookieNamed(name).getValue();
+    }
 }
