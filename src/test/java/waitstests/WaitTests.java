@@ -49,6 +49,7 @@ public class WaitTests extends TestUtilities {
         // Verifications
         assertEquals(dynamicLoadingExample2Page.getLoadedText(), "Hello World!",
                 "Loaded text incorrect");
-        assertFalse(dynamicLoadingExample2Page.isStartButtonDisplayed(), "Start button is displayed");
+        assertFalse(dynamicLoadingExample2Page.isStartButtonDisplayed(),
+                "Start button is displayed");
     }
 }

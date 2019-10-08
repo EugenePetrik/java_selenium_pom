@@ -13,7 +13,7 @@ public class KeyPressesTests extends TestUtilities {
 
     @Test(groups = { "smokeTests" })
     public void pressKeyTest() {
-        // Open KeyPressesPage
+        // Open main page
         WelcomePage welcomePage = new WelcomePage(driver, log);
         welcomePage.openPage();
 
@@ -26,15 +26,14 @@ public class KeyPressesTests extends TestUtilities {
         // Get Results text
         String result = keyPressesPage.getResultText();
 
-        // Verification
-        // Result text is expected
+        // Verify that result text is expected
         assertTrue(result.equals("You entered: ENTER"),
                 "Result is not expected. \nShould be 'You entered: ENTER', but it is '" + result + "'");
     }
 
     @Test(groups = { "smokeTests" })
     public void pressKeyWithActionsTest() {
-        // Open KeyPressesPage
+        // Open main page
         WelcomePage welcomePage = new WelcomePage(driver, log);
         welcomePage.openPage();
 
@@ -47,15 +46,14 @@ public class KeyPressesTests extends TestUtilities {
         // Get Results text
         String result = keyPressesPage.getResultText();
 
-        // Verification
-        // Result text is expected
+        // Verify that result text is expected
         assertTrue(result.equals("You entered: SPACE"),
                 "Result is not expected. \nShould be 'You entered: SPACE', but it is '" + result + "'");
     }
 
     @Test(groups = { "smokeTests" })
     public void pressBackspaceTest() {
-        // Open KeyPressesPage
+        // Open main page
         WelcomePage welcomePage = new WelcomePage(driver, log);
         welcomePage.openPage();
 
@@ -65,14 +63,13 @@ public class KeyPressesTests extends TestUtilities {
         // Push keyboard key
         keyPressesPage.enterText("A" + Keys.BACK_SPACE);
 
-        // Verification
-        // Result text is expected
+        // Verify that result text is expected
         assertEquals(keyPressesPage.getResultText(), "You entered: BACK_SPACE");
     }
 
     @Test(groups = { "smokeTests" })
     public void pressPiTest() {
-        // Open KeyPressesPage
+        // Open main page
         WelcomePage welcomePage = new WelcomePage(driver, log);
         welcomePage.openPage();
 
@@ -82,8 +79,7 @@ public class KeyPressesTests extends TestUtilities {
         // Push keyboard key
         keyPressesPage.enterPi();
 
-        // Verification
-        // Result text is expected
+        // Verify that result text is expected
         assertEquals(keyPressesPage.getResultText(), "You entered: 4");
     }
 }

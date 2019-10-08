@@ -25,9 +25,9 @@ public class MultipleWindowsTests extends TestUtilities {
         // Find and switch to new window page
         NewWindowPage newWindowPage = windowsPage.switchToNewWindowPage();
 
-        // Verification
-        // New page contains expected text in source
+        // Verify that new page contains expected text in source
         String pageSource = newWindowPage.getCurrentPageSource();
-        assertTrue(pageSource.contains("New Window"), "New page source doesn't contain expected text");
+        assertTrue(pageSource.contains("New Window"),
+                "New page source doesn't contain expected text");
     }
 }

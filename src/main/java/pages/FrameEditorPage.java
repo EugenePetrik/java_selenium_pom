@@ -20,7 +20,7 @@ public class FrameEditorPage extends BasePageObject {
      * Get text from TinyMCE WYSIWYG Editor
      */
     public String getEditorText() {
-        switchToFrame(frameLocator);
+        switchToFrameByLocator(frameLocator);
         String text = find(editorLocator).getText();
         log.info("Text from TinyMCE WYSIWYG Editor: " + text);
         return text;
@@ -65,6 +65,6 @@ public class FrameEditorPage extends BasePageObject {
      * Switch to Edit Area
      */
     private void switchToEditArea() {
-        driver.switchTo().frame(editorIframeId);
+        switchToFrameByName(editorIframeId);
     }
 }

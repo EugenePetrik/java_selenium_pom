@@ -54,8 +54,8 @@ public class FrameEditorTests extends TestUtilities {
         editorPage.decreaseIndention();
         editorPage.setTextArea(text2);
 
-        // Verification
-        // Text filled in properly
-        assertEquals(editorPage.getTextFromEditor(), text1 + text2, "Text from editor is incorrect");
+        // Verify that text filled in properly
+        assertEquals(editorPage.getTextFromEditor(), text1 + text2,
+                "Text from editor is incorrect");
     }
 }

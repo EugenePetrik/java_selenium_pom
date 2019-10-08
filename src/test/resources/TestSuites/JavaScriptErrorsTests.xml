@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="JavaScriptErrorsTestSuite" verbose="1">
+<suite name="Java Script Errors Test Suite" verbose="1">
     <test name="JavaScriptErrorsTest">
         <parameter name="browser" value="chrome" />
         <classes>

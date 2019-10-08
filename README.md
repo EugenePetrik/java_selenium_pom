@@ -8,13 +8,9 @@
 
 ```mvn clean test -Dtest=PositiveLoginTests```
 
-### Run scenarios from TestNG xml file:
-
-```mvn clean test -DsuiteXmlFile=testng.xml```
-
 ### Run scenarios from specific TestNG xml file:
 
-```mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/TestSuites/NegativeLoginTests.xml```
+```mvn clean test -Dsuite=DragAndDropTests```
 
 ### Run scenarios for smokeTests group:
 

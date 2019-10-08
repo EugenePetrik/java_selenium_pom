@@ -17,6 +17,6 @@ public class LargeAndDeepDomPage extends BasePageObject {
     public void scrollToTable() {
         WebElement tableElement = driver.findElement(tableLocator);
         String script = "arguments[0].scrollIntoView();";
-        ((JavascriptExecutor)driver).executeScript(script, tableElement);
+        ((JavascriptExecutor) driver).executeScript(script, tableElement);
     }
 }

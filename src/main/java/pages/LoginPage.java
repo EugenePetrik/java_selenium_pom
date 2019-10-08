@@ -39,7 +39,7 @@ public class LoginPage extends BasePageObject {
     /**
      * Wait for error message to be visible on the page
      */
-    private void waitForErrorMessage() {
+    protected void waitForErrorMessage() {
         waitForVisibilityOf(errorMessageLocator, 5);
     }
 

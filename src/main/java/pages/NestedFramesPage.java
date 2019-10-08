@@ -19,8 +19,8 @@ public class NestedFramesPage extends BasePageObject {
      * Get Left Frame text
      */
     public String getLeftFrameText() {
-        driver.switchTo().frame(topFrame);
-        driver.switchTo().frame(leftFrame);
+        switchToFrameByName(topFrame);
+        switchToFrameByName(leftFrame);
         String text = getFrameText();
         switchToParentFrame();              // Exit left to top
         switchToParentFrame();              // Exit top to main
@@ -31,7 +31,7 @@ public class NestedFramesPage extends BasePageObject {
      * Get Bottom Frame text
      */
     public String getBottomFrameText() {
-        driver.switchTo().frame(bottomFrame);
+        switchToFrameByName(bottomFrame);
         String text = getFrameText();
         switchToParentFrame();              // Exit top to main
         return text;

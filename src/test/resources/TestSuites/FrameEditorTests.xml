@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="FrameEditorTestSuite" verbose="1">
+<suite name="Frame Editor Test Suite" verbose="1">
     <test name="FrameEditorTest-CH">
         <parameter name="browser" value="chrome" />
         <classes>

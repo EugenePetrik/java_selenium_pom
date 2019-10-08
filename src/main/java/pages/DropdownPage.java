@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 
 public class DropdownPage extends BasePageObject {
 
-    private By dropdown = By.id("dropdown");
+    private By dropdownLocator = By.id("dropdown");
 
     public DropdownPage(WebDriver driver, Logger log) {
         super(driver, log);
@@ -20,29 +20,24 @@ public class DropdownPage extends BasePageObject {
     /**
      * This method selects given option by value from dropdown
      */
-    public void selectOptionByValue(int i) {
-        log.info("Selecting option " + i + " from dropdown");
-
-        findDropDownElement().selectByValue("" + i);
-
-        // There are three ways to use Select class:
-
-        // #1
-        // findDropDownElement().selectByIndex(i);
-
-        // #2
-        // findDropDownElement().selectByValue("" + i);
-
-        // #3
-        // findDropDownElement().selectByVisibleText("Option " + i);
+    public void selectOptionByValue(int value) {
+        log.info("Selecting option with value " + value + " from dropdown");
+        findDropDownElement().selectByValue("" + value);
     }
 
     /**
-     * This method selects given option by value from dropdown
+     * This method selects given option by index from dropdown
+     */
+    public void selectOptionByIndex(int index) {
+        log.info("Selecting option with index '" + index + "' from dropdown");
+        findDropDownElement().selectByIndex(index);
+    }
+
+    /**
+     * This method selects given option by text from dropdown
      */
     public void selectOptionByText(String option) {
         log.info("Selecting option '" + option + "' from dropdown");
-
         findDropDownElement().selectByVisibleText(option);
     }
 
@@ -50,9 +45,7 @@ public class DropdownPage extends BasePageObject {
      * This method returns selected option in dropdown as a string
      */
     public String getSelectedOption() {
-        WebElement dropdownElement = find(dropdown);
-        Select dropdown = new Select(dropdownElement);
-        String selectedOption = dropdown.getFirstSelectedOption().getText();
+        String selectedOption = findDropDownElement().getFirstSelectedOption().getText();
         log.info(selectedOption + " is selected in dropdown");
         return selectedOption;
     }
@@ -62,14 +55,14 @@ public class DropdownPage extends BasePageObject {
      */
     public List<String> getSelectedOptions() {
         List<WebElement> selectedElements = findDropDownElement().getAllSelectedOptions();
-        return selectedElements.stream().map(e->e.getText()).collect(Collectors.toList());
+        return selectedElements.stream().map(e -> e.getText()).collect(Collectors.toList());
     }
 
     /**
      * Find DropDown Element
      */
     private Select findDropDownElement() {
-        WebElement dropdownElement = find(dropdown);
+        WebElement dropdownElement = find(dropdownLocator);
         return new Select(dropdownElement);
     }
 }

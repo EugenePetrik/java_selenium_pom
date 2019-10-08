@@ -9,7 +9,7 @@ import java.util.List;
 
 public class CheckboxesPage extends BasePageObject {
 
-    private By checkbox = By.xpath("//input[@type='checkbox']");
+    private By checkboxLocator = By.xpath("//input[@type='checkbox']");
 
     public CheckboxesPage(WebDriver driver, Logger log) {
         super(driver, log);
@@ -20,7 +20,8 @@ public class CheckboxesPage extends BasePageObject {
      */
     public void selectAllCheckboxes() {
         log.info("Checking all unchecked checkboxes");
-        List<WebElement> checkboxes = findAll(checkbox);
+        List<WebElement> checkboxes = findAll(checkboxLocator);
+
         for (WebElement checkbox : checkboxes) {
             if (!checkbox.isSelected()) {
                 checkbox.click();
@@ -33,12 +34,14 @@ public class CheckboxesPage extends BasePageObject {
      */
     public boolean areAllCheckboxesChecked() {
         log.info("Verifying that all checkboxes are checked");
-        List<WebElement> checkboxes = findAll(checkbox);
+        List<WebElement> checkboxes = findAll(checkboxLocator);
+
         for (WebElement checkbox : checkboxes) {
             if (!checkbox.isSelected()) {
                 return false;
             }
         }
+        
         return true;
     }
 }

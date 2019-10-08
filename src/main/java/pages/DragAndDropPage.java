@@ -6,8 +6,8 @@ import org.openqa.selenium.WebDriver;
 
 public class DragAndDropPage extends BasePageObject {
 
-    private By columnA = By.id("column-a");
-    private By columnB = By.id("column-b");
+    private By columnALocator = By.id("column-a");
+    private By columnBLocator = By.id("column-b");
 
     public DragAndDropPage(WebDriver driver, Logger log) {
         super(driver, log);
@@ -18,14 +18,14 @@ public class DragAndDropPage extends BasePageObject {
      */
     public void dragAtoB() {
         log.info("Drag and drop A box on B box");
-        performDragAndDrop(columnA, columnB);
+        performDragAndDrop(columnALocator, columnBLocator);
     }
 
     /**
      * Getting Column A Text
      */
     public String getColumnAText() {
-        String text = find(columnA).getText();
+        String text = find(columnALocator).getText();
         log.info("Column A Text: " + text);
         return text;
     }
@@ -34,7 +34,7 @@ public class DragAndDropPage extends BasePageObject {
      * Getting Column B Text
      */
     public String getColumnBText() {
-        String text = find(columnB).getText();
+        String text = find(columnBLocator).getText();
         log.info("Column B Text: " + text);
         return text;
     }

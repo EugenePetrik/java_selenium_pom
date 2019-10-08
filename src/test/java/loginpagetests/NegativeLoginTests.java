@@ -24,7 +24,7 @@ public class NegativeLoginTests extends TestUtilities {
 
         log.info("Starting Negative Login Test # " + number + " for " + description);
 
-        // Open Main page
+        // Open main page
         WelcomePage welcomePage = new WelcomePage(driver, log);
         welcomePage.openPage();
 

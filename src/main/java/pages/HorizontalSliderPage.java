@@ -35,6 +35,7 @@ public class HorizontalSliderPage extends BasePageObject {
 
         // Perform steps
         pressKey(sliderLocator, Keys.ENTER);
+        
         for (int i = 0; i < steps; i++) {
             pressKey(sliderLocator, Keys.ARROW_RIGHT);
         }

@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 
 public class WelcomePage extends BasePageObject {
 
-    private String pageUrl = "https://the-internet.herokuapp.com/";
+    private final String WELCOME_PAGE_URL = "https://the-internet.herokuapp.com/";
 
     private By formAuthenticationLinkLocator = By.linkText("Form Authentication");
     private By forgotPasswordLinkLocator = By.linkText("Forgot Password");
@@ -35,8 +35,8 @@ public class WelcomePage extends BasePageObject {
      * Open WelcomePage with it's url
      */
     public void openPage() {
-        log.info("Opening page: " + pageUrl);
-        openUrl(pageUrl);
+        log.info("Opening page: " + WELCOME_PAGE_URL);
+        openUrl(WELCOME_PAGE_URL);
         log.info("Page opened!");
     }
 

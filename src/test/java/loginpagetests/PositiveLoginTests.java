@@ -13,7 +13,7 @@ public class PositiveLoginTests extends TestUtilities {
 
     @Test(priority = 1, enabled = true, groups = { "positiveLoginTests", "smokeTests" })
     public void positiveLoginTest() {
-        // Open Main page
+        // Open main page
         WelcomePage welcomePage = new WelcomePage(driver, log);
         welcomePage.openPage();
 
@@ -44,13 +44,11 @@ public class PositiveLoginTests extends TestUtilities {
         log.info("Session cookie: " + session);
 
         // Verification
-        // New url
+        // 1 - New url
         assertEquals(secureAreaPage.getCurrentUrl(), secureAreaPage.getPageUrl());
-
-        // Log out button is visible
+        // 2 - Log out button is visible
         assertTrue(secureAreaPage.isLogOutButtonVisible(), "Logout button is not visible");
-
-        // Successful log in message
+        // 3 - Successful log in message
         String expectedSuccessMessage = "You logged into a secure area!";
         String actualSuccessMessage = secureAreaPage.getSuccessMessageText();
         assertTrue(actualSuccessMessage.contains(expectedSuccessMessage),

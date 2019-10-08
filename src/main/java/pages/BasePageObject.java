@@ -89,8 +89,7 @@ public class BasePageObject {
     }
 
     /**
-     * Wait for given number of seconds for element with given locator to be visible
-     * on the page
+     * Wait for given number of seconds for element with given locator to be visible on the page
      */
     protected void waitForVisibilityOf(By locator, Integer... timeOutInSeconds) {
         int attempts = 0;
@@ -103,8 +102,25 @@ public class BasePageObject {
             } catch (StaleElementReferenceException e) {
                 e.printStackTrace();
             }
+
             attempts++;
         }
+    }
+
+    /**
+     * Wait for given number of seconds for element with given locator to be invisible on the page
+     */
+    protected void waitForInvisibilityOf(By locator, Integer... timeOutInSeconds) {
+        WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds.length > 0 ? timeOutInSeconds[0] : 10);
+        wait.until(ExpectedConditions.invisibilityOf(find(locator)));
+    }
+
+    /**
+     * Wait for given number of seconds for element with given locator to be presence on the page
+     */
+    protected void waitForPresenceOf(By locator, Integer... timeOutInSeconds) {
+        WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds.length > 0 ? timeOutInSeconds[0] : 10);
+        wait.until(ExpectedConditions.presenceOfElementLocated(locator));
     }
 
     /**
@@ -119,7 +135,7 @@ public class BasePageObject {
     /**
      * Switch to window with specific title
      */
-    public void switchToWindowWithTitle(String expectedTitle) {
+    protected void switchToWindowWithTitle(String expectedTitle) {
         // Switching to new window
         String firstWindow = driver.getWindowHandle();
 
@@ -141,12 +157,19 @@ public class BasePageObject {
     /**
      * Switch to Frame using it's locator
      */
-    protected void switchToFrame(By frameLocator) {
+    protected void switchToFrameByLocator(By frameLocator) {
         driver.switchTo().frame(find(frameLocator));
     }
 
     /**
-     * Switch to Parent Frame using it's locator
+     * Switch to Frame using it's locator
+     */
+    protected void switchToFrameByName(String frameLocator) {
+        driver.switchTo().frame(frameLocator);
+    }
+
+    /**
+     * Switch to Parent Frame
      */
     protected void switchToParentFrame() {
         driver.switchTo().parentFrame();

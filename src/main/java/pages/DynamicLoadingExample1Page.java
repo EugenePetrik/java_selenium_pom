@@ -3,8 +3,6 @@ package pages;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class DynamicLoadingExample1Page extends BasePageObject{
 
@@ -21,8 +19,7 @@ public class DynamicLoadingExample1Page extends BasePageObject{
      */
     public void clickStart() {
         click(startButtonLocator);
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.invisibilityOf(driver.findElement(loadingIndicatorLocator)));
+        waitForInvisibilityOf(loadingIndicatorLocator);
     }
 
     /**

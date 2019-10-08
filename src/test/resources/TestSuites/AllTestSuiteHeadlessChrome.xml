@@ -1,8 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="All Test Suite" verbose="1" parallel="methods" thread-count="4">
+<suite name="All Test Suite Headless Chrome" verbose="1" parallel="methods" thread-count="4">
     <listeners>
-        <listener class-name="base.TestListener"></listener>
+        <listener class-name="base.TestListener" />
     </listeners>
 
     <test name="All Tests In Headless Chrome">

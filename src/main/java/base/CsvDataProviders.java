@@ -16,12 +16,13 @@ public class CsvDataProviders {
     public static Iterator<Object[]> csvReader(Method method) {
         List<Object[]> list = new ArrayList<>();
 
-        String pathname = "src" + File.separator
-                + "test" + File.separator
-                + "resources" + File.separator
-                + "dataproviders" + File.separator
-                + method.getDeclaringClass().getSimpleName() + File.separator
-                + method.getName() + ".csv";
+        String pathname = System.getProperty("user.dir")
+                + File.separator + "src"
+                + File.separator + "test" 
+                + File.separator + "resources" 
+                + File.separator + "dataproviders" 
+                + File.separator + method.getDeclaringClass().getSimpleName() 
+                + File.separator + method.getName() + ".csv";
 
         File file = new File(pathname);
 

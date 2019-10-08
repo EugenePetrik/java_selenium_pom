@@ -4,7 +4,6 @@ import base.TestUtilities;
 import org.openqa.selenium.logging.LogEntry;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import pages.JavaScriptErrorsPage;
 import pages.WelcomePage;
 
 import java.util.List;
@@ -20,7 +19,7 @@ public class JavaScriptErrorsTests extends TestUtilities {
         welcomePage.openPage();
 
         // Click on JavaScript onload event error link
-        JavaScriptErrorsPage javaScriptErrorsPage = welcomePage.clickJavaScriptErrorsLink();
+        welcomePage.clickJavaScriptErrorsLink();
 
         // Get logs
         List<LogEntry> logs = getBrowserLogs();

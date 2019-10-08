@@ -16,7 +16,7 @@ import java.util.List;
 public class TestUtilities extends BaseTest {
 
     /**
-     * Add DataProvider for taking some files
+     * DataProvider for taking some files
      */
     @DataProvider(name = "files")
     protected static Object[][] files() {
@@ -32,6 +32,7 @@ public class TestUtilities extends BaseTest {
      */
     protected void takeScreenshot(String fileName) {
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
         String path = System.getProperty("user.dir")
                 + File.separator + "test-output"
                 + File.separator + "screenshots"
@@ -41,6 +42,7 @@ public class TestUtilities extends BaseTest {
                 + File.separator + testMethodName
                 + File.separator + getSystemTime()
                 + " " + fileName + ".png";
+                
         try {
             FileUtils.copyFile(scrFile, new File(path));
         } catch (IOException e) {

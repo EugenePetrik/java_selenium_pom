@@ -14,3 +14,10 @@ buildNumber.properties
 .idea/
 
 test-output/
+
+.classpath
+.factorypath
+.project
+
+.settings/
+bin/

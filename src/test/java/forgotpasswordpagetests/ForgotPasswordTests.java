@@ -23,7 +23,7 @@ public class ForgotPasswordTests extends TestUtilities {
 
         log.info("Starting Retrieve Password Test # " + number + " for " + description);
 
-        // Open Main page
+        // Open main page
         WelcomePage welcomePage = new WelcomePage(driver, log);
         welcomePage.openPage();
 
@@ -33,8 +33,7 @@ public class ForgotPasswordTests extends TestUtilities {
         // Execute retrieve password
         EmailSentPage emailSentPage = forgotPasswordPage.retrievePassword(email);
 
-        // Verification
-        // Successful retrieve password message
+        // Verify successful retrieve password message
         assertEquals(emailSentPage.getMessage(), expectedMessage, "Message is incorrect");
     }
 }

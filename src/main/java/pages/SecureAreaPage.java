@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 
 public class SecureAreaPage extends BasePageObject {
 
-    private String pageUrl = "https://the-internet.herokuapp.com/secure";
+    private final String SECURE_PAGE_URL = "https://the-internet.herokuapp.com/secure";
 
     private By logOutButtonLocator = By.cssSelector("a[href='/logout']");
     private By messageLocator = By.id("flash");
@@ -19,7 +19,7 @@ public class SecureAreaPage extends BasePageObject {
      * Get URL variable from PageObject
      */
     public String getPageUrl() {
-        return pageUrl;
+        return SECURE_PAGE_URL;
     }
 
     /**

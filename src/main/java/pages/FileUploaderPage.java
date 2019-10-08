@@ -29,13 +29,15 @@ public class FileUploaderPage extends BasePageObject {
      */
     public void selectFile(String fileName) {
         log.info("Selecting '" + fileName + "' file from Files folder");
-        String filePath = System.getProperty("user.dir") + File.separator +
-                "src" + File.separator +
-                "test" + File.separator +
-                "resources" + File.separator +
-                "dataproviders" + File.separator +
-                "files" + File.separator +
-                fileName;
+
+        String filePath = System.getProperty("user.dir")
+                + File.separator + "src"
+                + File.separator + "test"
+                + File.separator + "resources"
+                + File.separator + "dataproviders"
+                + File.separator + "files"
+                + File.separator + fileName;
+                
         type(filePath, choseFileFieldLocator);
         log.info("File selected");
     }
