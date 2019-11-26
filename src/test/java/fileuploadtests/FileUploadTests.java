@@ -29,7 +29,7 @@ public class FileUploadTests extends TestUtilities {
         // Get uploaded files
         String fileNames = fileUploaderPage.getUploadedFilesNames();
 
-        // Verify selected file uploaded
+        // Verify that selected file is uploaded
         assertTrue(fileName.contains(fileNames),
                 "Our file (" + fileName + ") is not one of the uploaded (" + fileNames + ")");
     }

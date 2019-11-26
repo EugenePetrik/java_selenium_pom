@@ -27,7 +27,7 @@ public class ContextMenuTests extends TestUtilities {
         // Accept alert
         contextMenuPage.acceptPopUp();
 
-        // Verifications
+        // Verify that pop-up has text
         assertEquals(message, "You selected a context menu", "Popup message incorrect");
     }
 }

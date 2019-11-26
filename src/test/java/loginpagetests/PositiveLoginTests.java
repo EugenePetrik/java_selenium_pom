@@ -43,12 +43,11 @@ public class PositiveLoginTests extends TestUtilities {
         String session = secureAreaPage.getCookie("rack.session");
         log.info("Session cookie: " + session);
 
-        // Verification
-        // 1 - New url
+        // Verify new url
         assertEquals(secureAreaPage.getCurrentUrl(), secureAreaPage.getPageUrl());
-        // 2 - Log out button is visible
+        // Verify that log out button is visible
         assertTrue(secureAreaPage.isLogOutButtonVisible(), "Logout button is not visible");
-        // 3 - Successful log in message
+        // Verify that successful log in message
         String expectedSuccessMessage = "You logged into a secure area!";
         String actualSuccessMessage = secureAreaPage.getSuccessMessageText();
         assertTrue(actualSuccessMessage.contains(expectedSuccessMessage),

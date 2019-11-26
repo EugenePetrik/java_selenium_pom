@@ -3,7 +3,7 @@
 <suite name="Wait Test Suite" verbose="1">
     <test name="WaitTest">
         <classes>
-            <class name="waitstests.WaitTests" />
+            <class name="waittests.WaitTests" />
         </classes>
     </test>
 </suite>

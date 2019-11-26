@@ -2,7 +2,7 @@
 
 <suite name="Smoke Test Suite Chrome" verbose="1" parallel="methods" thread-count="4">
     <listeners>
-        <listener class-name="base.TestListener"></listener>
+        <listener class-name="base.TestListener"/>
     </listeners>
 
     <test name="SmokeTests">
@@ -29,7 +29,7 @@
             <class name="hoverstests.HoversTests" />
             <class name="horizontalslidertests.HorizontalSliderTests" />
             <class name="javascriptscrollingtests.JavaScriptScrollingTests" />
-            <class name="waitstests.WaitTests" />
+            <class name="waittests.WaitTests" />
             <class name="javascripterrorstests.JavaScriptErrorsTests" />
         </classes>
     </test>

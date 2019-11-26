@@ -24,7 +24,7 @@ public class JavaScriptErrorsTests extends TestUtilities {
         // Get logs
         List<LogEntry> logs = getBrowserLogs();
 
-        // Verifying there are no JavaScript errors in console
+        // Verify that there are no JavaScript errors in console
         for (LogEntry logEntry : logs) {
             if (logEntry.getLevel().toString().equals("SEVERE")) {
                 softAssert.fail("Severe error: " + logEntry.getMessage());

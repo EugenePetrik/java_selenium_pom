@@ -24,7 +24,7 @@ public class DropdownTests extends TestUtilities {
         String option = "Option 1";
         dropdownPage.selectOptionByText(option);
 
-        // Verify Option 1 is selected
+        // Verify that Option 1 is selected
         List<String> selectedOptions = dropdownPage.getSelectedOptions();
         assertEquals(selectedOptions.size(), 1, "Incorrect number of selections");
         assertTrue(selectedOptions.contains(option), "Option not selected");
@@ -42,7 +42,7 @@ public class DropdownTests extends TestUtilities {
         // Select Option 2
         dropdownPage.selectOptionByValue(2);
 
-        // Verify Option 2 is selected
+        // Verify that Option 2 is selected
         String selectedOption = dropdownPage.getSelectedOption();
         assertTrue(selectedOption.equals("Option 2"),
                 "Option 2 is not selected. Instead selected - " + selectedOption);

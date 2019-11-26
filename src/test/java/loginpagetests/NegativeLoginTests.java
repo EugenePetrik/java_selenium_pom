@@ -34,7 +34,7 @@ public class NegativeLoginTests extends TestUtilities {
         // Execute negative login
         loginPage.negativeLogin(username, password);
 
-        // Verification
+        // Verify correct error message
         String actualErrorMessage = loginPage.getErrorMessageText();
         assertTrue(actualErrorMessage.contains(expectedErrorMessage),
                 "actualErrorMessage does not contain expectedErrorMessage\nexpectedErrorMessage: "

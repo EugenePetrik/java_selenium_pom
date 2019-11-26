@@ -103,7 +103,7 @@
 
     <test name="WaitTests">
         <classes>
-            <class name="waitstests.WaitTests" />
+            <class name="waittests.WaitTests" />
         </classes>
     </test>
 

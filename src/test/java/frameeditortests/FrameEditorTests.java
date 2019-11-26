@@ -25,8 +25,7 @@ public class FrameEditorTests extends TestUtilities {
         // Get default editor text
         String editorText = editorPage.getEditorText();
 
-        // Verification
-        // New page contains expected text in source
+        // Verify that new page contains expected text in source
         assertTrue(editorText.equals("Your content goes here."),
                 "Editor default text is not expected. It is: " + editorText);
     }
