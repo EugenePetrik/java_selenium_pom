@@ -40,8 +40,7 @@ public class TestUtilities extends BaseTest {
                 + File.separator + testSuiteName
                 + File.separator + testName
                 + File.separator + testMethodName
-                + File.separator + getSystemTime()
-                + " " + fileName + ".png";
+                + File.separator + getSystemTime() + " " + fileName + ".png";
                 
         try {
             FileUtils.copyFile(scrFile, new File(path));

@@ -6,9 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
 public class DropdownPage extends BasePageObject {
 
     private By dropdownLocator = By.id("dropdown");
@@ -48,14 +45,6 @@ public class DropdownPage extends BasePageObject {
         String selectedOption = findDropDownElement().getFirstSelectedOption().getText();
         log.info(selectedOption + " is selected in dropdown");
         return selectedOption;
-    }
-
-    /**
-     * This method returns ALL selected options in dropdown as a string
-     */
-    public List<String> getSelectedOptions() {
-        List<WebElement> selectedElements = findDropDownElement().getAllSelectedOptions();
-        return selectedElements.stream().map(e -> e.getText()).collect(Collectors.toList());
     }
 
     /**

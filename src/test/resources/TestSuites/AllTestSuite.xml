@@ -41,12 +41,6 @@
         </classes>
     </test>
 
-    <test name="ContextMenuTests">
-        <classes>
-            <class name="contextmenutests.ContextMenuTests" />
-        </classes>
-    </test>
-
     <test name="MultipleWindowsTests">
         <classes>
             <class name="multiplewindowstests.MultipleWindowsTests" />
@@ -56,12 +50,6 @@
     <test name="FrameEditorTests">
         <classes>
             <class name="frameeditortests.FrameEditorTests" />
-        </classes>
-    </test>
-
-    <test name="FrameTests">
-        <classes>
-            <class name="framestests.FramesTests" />
         </classes>
     </test>
 
@@ -98,12 +86,6 @@
     <test name="JavaScriptScrollingTests">
         <classes>
             <class name="javascriptscrollingtests.JavaScriptScrollingTests" />
-        </classes>
-    </test>
-
-    <test name="WaitTests">
-        <classes>
-            <class name="waittests.WaitTests" />
         </classes>
     </test>
 

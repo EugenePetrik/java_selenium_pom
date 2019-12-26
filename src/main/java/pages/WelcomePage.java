@@ -13,10 +13,8 @@ public class WelcomePage extends BasePageObject {
     private By checkboxesLinkLocator = By.linkText("Checkboxes");
     private By dropdownLinkLocator = By.linkText("Dropdown");
     private By javaScriptAlertsLinkLocator = By.linkText("JavaScript Alerts");
-    private By contextMenuLinkLocator = By.linkText("Context Menu");
     private By multipleWindowsLinkLocator = By.linkText("Multiple Windows");
     private By editorLinkLocator = By.linkText("WYSIWYG Editor");
-    private By framesLinkLocator = By.linkText("Frames");
     private By keyPressesLocator = By.linkText("Key Presses");
     private By fileUploadLocator = By.linkText("File Upload");
     private By dragAndDropLocator = By.linkText("Drag and Drop");
@@ -24,7 +22,6 @@ public class WelcomePage extends BasePageObject {
     private By horizontalSliderLocator = By.linkText("Horizontal Slider");
     private By largeAndDeepDomLocator = By.linkText("Large & Deep DOM");
     private By infiniteScrollLocator = By.linkText("Infinite Scroll");
-    private By dynamicLoadingLocator = By.linkText("Dynamic Loading");
     private By javascriptOnloadEventErrorLocator = By.linkText("JavaScript onload event error");
 
     public WelcomePage(WebDriver driver, Logger log) {
@@ -86,15 +83,6 @@ public class WelcomePage extends BasePageObject {
     }
 
     /**
-     * Open ContextMenuPage by clicking on Context Menu Link
-     */
-    public ContextMenuPage clickContextMenuLink() {
-        log.info("Clicking Context Menu link on Welcome Page");
-        click(contextMenuLinkLocator);
-        return new ContextMenuPage(driver, log);
-    }
-
-    /**
      * Open MultipleWindowsPage by clicking on Multiple Windows Link
      */
     public MultipleWindowsPage clickMultipleWindowsLink() {
@@ -110,15 +98,6 @@ public class WelcomePage extends BasePageObject {
         log.info("Clicking WYSIWYG Editor link on Welcome Page");
         click(editorLinkLocator);
         return new FrameEditorPage(driver, log);
-    }
-
-    /**
-     * Open FramesPage by clicking on Frames Link
-     */
-    public FramesPage clickFramesLink() {
-        log.info("Clicking Frames link on Welcome Page");
-        click(framesLinkLocator);
-        return new FramesPage(driver, log);
     }
 
     /**
@@ -182,15 +161,6 @@ public class WelcomePage extends BasePageObject {
         log.info("Clicking Infinite Scroll Link on Welcome Page");
         click(infiniteScrollLocator);
         return new InfiniteScrollPage(driver, log);
-    }
-
-    /**
-     * Open InfiniteScrollPage by clicking on Infinite Scroll Link
-     */
-    public DynamicLoadingPage clickDynamicLoadingLink() {
-        log.info("Clicking Infinite Scroll Link on Welcome Page");
-        click(dynamicLoadingLocator);
-        return new DynamicLoadingPage(driver, log);
     }
 
     /**

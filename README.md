@@ -2,34 +2,53 @@
 
 #### Install Java:
 
-```https://www.oracle.com/technetwork/java/javase/downloads/index.html```
+[Java Installer](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
 #### Install Maven:
 
-```brew install maven```
+```shell
+brew install maven
+```
 
 #### Add environment variables to .bash_profile file:
 
-```export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-11.0.5.jdk/Contents/Home```
-```export PATH=$JAVA_HOME/bin:$PATH```
-```export PATH=/usr/local/Cellar/maven/3.6.2/bin:$PATH```
+```shell
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-11.0.5.jdk/Contents/Home
+```
+
+```shell
+export PATH=$JAVA_HOME/bin:$PATH
+```
+
+```shell
+export PATH=/usr/local/Cellar/maven/3.6.2/bin:$PATH
+```
 
 #### Git Large File Storage:
 
-```https://git-lfs.github.com/```
+[Git Storage](https://git-lfs.github.com/)
+
 
 #### Run all scenarios:
 
-```mvn clean compile test```
+```shell
+mvn clean compile test
+```
 
 #### Run scenarios from specific Test class:
 
-```mvn clean test -Dtest=PositiveLoginTests```
+```shell
+mvn clean test -Dtest=PositiveLoginTests
+```
 
 #### Run scenarios from specific TestNG xml file:
 
-```mvn clean test -Dsuite=DragAndDropTests```
+```shell
+mvn clean test -Dsuite=DragAndDropTests
+```
 
 #### Run scenarios for specific group:
 
-```mvn clean test -Dgroups=smokeTests```
+```shell
+mvn clean test -Dgroups=smokeTests
+```

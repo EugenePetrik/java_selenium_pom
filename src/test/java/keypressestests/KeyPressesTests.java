@@ -50,36 +50,4 @@ public class KeyPressesTests extends TestUtilities {
         assertTrue(result.equals("You entered: SPACE"),
                 "Result is not expected. \nShould be 'You entered: SPACE', but it is '" + result + "'");
     }
-
-    @Test(groups = { "smokeTests" })
-    public void pressBackspaceTest() {
-        // Open main page
-        WelcomePage welcomePage = new WelcomePage(driver, log);
-        welcomePage.openPage();
-
-        // Click on Key Presses link
-        KeyPressesPage keyPressesPage = welcomePage.clickKeyPressesLink();
-
-        // Push keyboard key
-        keyPressesPage.enterText("A" + Keys.BACK_SPACE);
-
-        // Verify that result text is expected
-        assertEquals(keyPressesPage.getResultText(), "You entered: BACK_SPACE");
-    }
-
-    @Test(groups = { "smokeTests" })
-    public void pressPiTest() {
-        // Open main page
-        WelcomePage welcomePage = new WelcomePage(driver, log);
-        welcomePage.openPage();
-
-        // Click on Key Presses link
-        KeyPressesPage keyPressesPage = welcomePage.clickKeyPressesLink();
-
-        // Push keyboard key
-        keyPressesPage.enterPi();
-
-        // Verify that result text is expected
-        assertEquals(keyPressesPage.getResultText(), "You entered: 4");
-    }
 }

@@ -19,17 +19,14 @@
             <class name="checkboxespagetests.CheckboxesTests" />
             <class name="dropdowntests.DropdownTests" />
             <class name="javascriptalertstests.JavaScriptAlertsTests" />
-            <class name="contextmenutests.ContextMenuTests" />
             <class name="multiplewindowstests.MultipleWindowsTests" />
             <class name="frameeditortests.FrameEditorTests" />
-            <class name="framestests.FramesTests" />
             <class name="keypressestests.KeyPressesTests" />
             <class name="fileuploadtests.FileUploadTests" />
             <class name="draganddroptests.DragAndDropTests" />
             <class name="hoverstests.HoversTests" />
             <class name="horizontalslidertests.HorizontalSliderTests" />
             <class name="javascriptscrollingtests.JavaScriptScrollingTests" />
-            <class name="waittests.WaitTests" />
             <class name="javascripterrorstests.JavaScriptErrorsTests" />
         </classes>
     </test>

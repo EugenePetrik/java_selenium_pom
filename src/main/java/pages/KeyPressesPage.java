@@ -8,7 +8,6 @@ import org.openqa.selenium.WebDriver;
 public class KeyPressesPage extends BasePageObject {
 
     private By bodyLocator = By.xpath("//body");
-    private By inputFieldLocator = By.id("target");
     private By resultTextLocator = By.id("result");
 
     public KeyPressesPage(WebDriver driver, Logger log) {
@@ -21,20 +20,6 @@ public class KeyPressesPage extends BasePageObject {
     public void pressKey(Keys key) {
         log.info("Pressing " + key.name());
         pressKey(bodyLocator, key);
-    }
-
-    /**
-     * Enter text
-     */
-    public void enterText(String text) {
-        type(text, inputFieldLocator);
-    }
-
-    /**
-     * Enter PI
-     */
-    public void enterPi() {
-        enterText(Keys.chord(Keys.ALT, "p") + "=3.14");
     }
 
     /**
